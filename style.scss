@@ -1,0 +1,195 @@
+/* color Text */
+$VeryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+$SoftRed: hsl(14, 88%, 65%);
+ 
+//  color Gradient
+//  Background gradient: 
+$SoftViolet: hsl(273, 75%, 66%);
+$SoftBlue: hsl(240, 73%, 65%);
+ 
+//  color Neutral 
+//  color Text
+$VeryDarkGrayishBlue: hsl(237, 12%, 33%);
+$DarkGrayishBlue: hsl(240, 6%, 50%);
+ 
+//  color Dividers
+$LightGrayishBlue: hsl(240, 5%, 91%);
+
+* ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient($SoftViolet, $SoftBlue);
+    overflow: hidden;
+    font-family: Kumbh Sans;
+    font-size: 12px;
+
+    .container {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 65%;
+        // height: 600px;
+        background: white;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 600px;
+        border-radius: 30px;
+        box-shadow: 0px 40px 70px -30px rgba(0,0,0,.5);
+
+        @media screen and (max-width: 1130px) {
+            width: 80%;
+        }
+
+        .illustrations {
+            position: relative;
+            height: 600px;
+
+            .illustration {
+                // position: relative;
+                overflow: hidden;
+                height: 100%;
+
+                #bg-pattern-desktop {
+                    position: relative;
+                    top: -230px;
+                    left: -500px;
+                }
+                #illustration-women-desktop {
+                    position: relative;
+                    width: 565px;
+                    top: -875px;
+                    left: -100px;
+                    z-index: 5;
+                }
+                #illustration-box {
+                    position: absolute;
+                    width: 215px;
+                    left: -105px;
+                    top: 240px;
+                    z-index: 5;
+                }
+            }
+        }
+        @media screen and (max-width: 1470px) {
+
+            .illustrations {
+                position: relative;
+                height: 600px;
+        
+                .illustration {
+                    // position: relative;
+                    overflow: hidden;
+                    height: 100%;
+        
+                    #bg-pattern-desktop {
+                        position: relative;
+                        top: -120px;
+                        left: -450px;
+                        width: 800px;
+                    }
+                    #illustration-women-desktop {
+                        position: relative;
+                        width: 413px;
+                        top: -628px;
+                        left: -61px;
+                        z-index: 5;
+                    }
+                    #illustration-box {
+                        position: absolute;
+                        width: 173px;
+                        left: -75px;
+                        top: 272px;
+                        z-index: 5;
+                    }
+                }
+            }
+            
+        }
+
+        .faq {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2px;
+
+            h1 {
+                margin-top: 0;
+                font-size: 40px;
+            }
+
+            .questions-reponses {
+                position: relative;
+                padding-right: 140px;
+
+                .question-reponse {
+                    border-bottom: 1px solid $LightGrayishBlue;
+                    overflow: hidden;
+                    padding-right: 15px;
+                    padding-bottom: 10px;
+
+                    .question {
+                        position: relative;
+                        width: 100%;
+                        color: $VeryDarkGrayishBlue;
+                        font-size: 14px;
+                        font-weight: 400;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        
+                        cursor: pointer;
+                        
+                        &:hover {
+                            color: $SoftRed;
+                        }
+    
+                        .arrow {
+                            height: 10px;
+                            transform: rotate(0);
+                        }
+                        .rotate {
+                            transform: rotate(180deg);
+                            -webkit-transform: rotate(180deg);
+                        }
+                    }
+                    .active-question {
+                        font-weight: 700;
+                        color: $VeryDarkDesaturatedBlue;
+                    }
+    
+                    .reponse {
+                        color: $DarkGrayishBlue;
+                        font-size: 12px;
+                        display: none;
+                    }
+                    .active-reponse {
+                        display: block;
+                    }
+                }
+                
+                
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 925px) {
+
+    .container {
+        height: 900px;
+    }
+
+}
+
+
