@@ -76,6 +76,13 @@ body {
                     top: 240px;
                     z-index: 5;
                 }
+
+                #bg-pattern-mobile {
+                    display: none;
+                }
+                #illustration-women-mobile {
+                    display: none;
+                }
             }
         }
         @media screen and (max-width: 1470px) {
@@ -146,7 +153,6 @@ body {
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
-                        
                         cursor: pointer;
                         
                         &:hover {
@@ -186,9 +192,63 @@ body {
 
 @media screen and (max-width: 925px) {
 
-    .container {
-        height: 900px;
+    body {
+
+        .container {
+            height: 650px;
+            width: 80%;
+            min-width: 300px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100px 1fr;
+    
+            .illustrations {
+    
+                .illustration {
+                    // position: relative;
+                    overflow: hidden;
+                    height: 100%;
+    
+                    #bg-pattern-desktop {
+                        display: none;
+                    }
+                    #illustration-women-desktop {
+                        display: none;
+                    }
+                    #illustration-women-mobile {
+                        display: block;
+                        position: absolute;
+                        width: 240px;
+                        top: -110px;
+                        left: 50%;
+                        transform: translate(-50%);
+                    }
+
+                    #bg-pattern-mobile {
+                        display: block;
+                        position: relative;
+                        left: 50%;
+                        transform: translate(-50%);
+                    }
+                    #illustration-box {
+                        display: none;
+                    }
+                }
+            }
+
+            .faq {
+                align-items: center;
+    
+                .questions-reponses {
+                    position: relative;
+                    padding-right: 0px;
+                    width: 90%;
+                }
+            }
+        }
+
     }
+
+    
 
 }
 
