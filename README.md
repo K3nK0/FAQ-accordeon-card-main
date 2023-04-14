@@ -6,7 +6,7 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://faq-accordeon-card-main.vercel.app/)
 
 ## Author
 
